@@ -81,3 +81,29 @@ switch(opcao) {
         console.log(`Parabéns você entrou pro time!`)
         break;
 }
+
+/* 5. Escreva um programa que calcula o Índice de Massa Corporal (IMC) de uma pessoa e
+determina a categoria de peso (baixo peso, peso normal, sobrepeso, obesidade)
+utilizando if-else. */
+
+let peso = 0;
+let altura = 0;
+let resultado = 0;
+
+peso = Number(prompt(`Digite o seu peso: `));
+altura = prompt(`Digite o seu altura: `);
+
+let alturaConvertida = parseFloat(altura.replace(",", "."));
+
+alturaQuadrado = alturaConvertida * alturaConvertida;
+resultado = peso / alturaQuadrado;
+
+if(resultado < 18.5) {
+    console.log(`Abaixo do peso - IMC: ${resultado.toFixed(2)}`)
+} else if (resultado >= 18.5 && resultado <= 24.9) {
+    console.log(`Peso ideal - IMC: ${resultado.toFixed(2)}`)
+} else if (resultado >= 25 && resultado < 30) {
+    console.log(`Acima do peso - IMC: ${resultado.toFixed(2)}`)
+} else {
+    console.log(`Obesidade - IMC: ${resultado.toFixed(2)}`)
+}

@@ -62,3 +62,22 @@ if(nota <= reprovado) {
         console.log(`Erro: nota inválida`);
     }
 }
+
+/* 4. Crie um menu interativo no console que oferece ao usuário a escolha de três opções.
+Utilize switch-case para implementar a lógica de cada opção selecionada. */
+
+let opcao = undefined;
+
+opcao = Number(prompt(`Você só pode escolher apenas um desejo: \n1 - Dinheiro\n2 - Amor\n3 - Ser Dev Java `));
+
+switch(opcao) {
+    case 1:
+        console.log(`Parabéns você escolheu Dinheiro`)
+        break;
+    case 2:
+        console.log(`Parabéns você escolheu Amor`)
+        break;
+    case 3:
+        console.log(`Parabéns você entrou pro time!`)
+        break;
+}

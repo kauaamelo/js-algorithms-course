@@ -88,7 +88,7 @@ utilizando if-else. */
 
 let peso = 0;
 let altura = 0;
-let resultado = 0;
+let resultadoImc = 0;
 
 peso = Number(prompt(`Digite o seu peso: `));
 altura = prompt(`Digite o seu altura: `);
@@ -96,16 +96,16 @@ altura = prompt(`Digite o seu altura: `);
 let alturaConvertida = parseFloat(altura.replace(",", "."));
 
 alturaQuadrado = alturaConvertida * alturaConvertida;
-resultado = peso / alturaQuadrado;
+resultadoImc = peso / alturaQuadrado;
 
-if(resultado < 18.5) {
-    console.log(`Abaixo do peso - IMC: ${resultado.toFixed(2)}`)
-} else if (resultado >= 18.5 && resultado <= 24.9) {
-    console.log(`Peso ideal - IMC: ${resultado.toFixed(2)}`)
-} else if (resultado >= 25 && resultado < 30) {
-    console.log(`Acima do peso - IMC: ${resultado.toFixed(2)}`)
+if(resultadoImc < 18.5) {
+    console.log(`Abaixo do peso - IMC: ${resultadoImc.toFixed(2)}`)
+} else if (resultadoImc >= 18.5 && resultadoImc <= 24.9) {
+    console.log(`Peso ideal - IMC: ${resultadoImc.toFixed(2)}`)
+} else if (resultadoImc >= 25 && resultadoImc < 30) {
+    console.log(`Acima do peso - IMC: ${resultadoImc.toFixed(2)}`)
 } else {
-    console.log(`Obesidade - IMC: ${resultado.toFixed(2)}`)
+    console.log(`Obesidade - IMC: ${resultadoImc.toFixed(2)}`)
 }
 
 /* 6. Ler três valores para os lados de um triângulo: A, B e C. Verificar se os lados fornecidos
@@ -140,4 +140,23 @@ if(trianguloValido) {
 }
 } else {
     console.log(`Não é um triangulo!`)
+}
+
+/* 7. As maçãs custam R$ 0,30 se forem compradas menos do que uma dúzia, e R$ 0,25 se
+forem compradas pelo menos doze. Escreva um algoritmo que leia o número de maçãs
+compradas, calcule e escreva o valor total da compra. */
+
+let valorFinal = 0;
+let valorMaca = 0.30;
+let valorDesconto = 0.25;
+let valorFinalDesconto = 0;
+
+let quantidadeMacas = prompt(`Quantas maças você gostaria de comprar ? `);
+
+if(quantidadeMacas < 12) {
+    valorFinal = quantidadeMacas * valorMaca
+    console.log(`O valor é: ${valorFinal.toFixed(2)} e você comprou: ${quantidadeMacas} maças`)
+} else if(quantidadeMacas >= 12){
+    valorFinalDesconto = quantidadeMacas * valorDesconto
+    console.log(`O valor é: ${valorFinalDesconto.toFixed(2)} e você comprou: ${quantidadeMacas} maças`)
 }

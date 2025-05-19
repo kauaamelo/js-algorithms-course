@@ -107,3 +107,37 @@ if(resultado < 18.5) {
 } else {
     console.log(`Obesidade - IMC: ${resultado.toFixed(2)}`)
 }
+
+/* 6. Ler três valores para os lados de um triângulo: A, B e C. Verificar se os lados fornecidos
+formam realmente um triângulo. Caso forme, deve ser indicado o tipo de triângulo:
+Isósceles, escaleno ou eqüilátero. */
+
+let valorA = 0;
+let valorB = 0;
+let valorC = 0;
+
+valorA = Number(prompt(`Digite o primeiro valor do triangulo: `));
+valorB = Number(prompt(`Digite o segundo valor do triangulo: `));
+valorC = Number(prompt(`Digite o terceiro valor do triangulo: `));
+
+somaAeB = valorA + valorB
+somaAeC = valorA + valorC
+somaBeC = valorB + valorC
+
+trianguloValido = somaAeB > valorC && somaAeC > valorB && somaBeC > valorA
+
+if(trianguloValido) {
+    console.log(`É um triangulo!`)
+
+    if((valorA == valorB) && (valorC == valorA)){
+    console.log(`Triangulo: equilátero (todos os lados são iguais).`)
+} else if((valorA == valorB) && (valorA !== valorC)){
+    console.log(`Triangulo: isósceles (dois lados são iguais e o terceiro é diferente).`)
+} else if((valorA !== valorB) && (valorA !== valorC)){
+    console.log(`Triangulo escaleno (todos os lados são diferentes).`)
+} else {
+    console.log(`Erro: ao realizar calculo`)
+}
+} else {
+    console.log(`Não é um triangulo!`)
+}

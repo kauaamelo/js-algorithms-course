@@ -42,7 +42,11 @@ Os desafios foram resolvidos utilizando a linguagem **JavaScript**, com foco no 
    ```bash
    cd js-algorithms-course
    ```
-3. Execute os arquivos com Node.js:
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Execute os arquivos com Node.js:
    ```bash
    activities-one.js
    ```

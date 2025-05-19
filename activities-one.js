@@ -3,9 +3,9 @@ const prompt = require('prompt-sync')()
 /* 1. Escreva um programa que recebe um número inteiro e verifica se ele é par ou ímpar
  utilizando uma estrutura de controle if. */
 
-let numero = undefined;
+let numero = 0;
 
-numero = Number(prompt(`Digite um numero: `))
+numero = Number(prompt(`1 Exercicio \nDigite um numero: `))
 
 if(numero % 2 === 0) {
     console.log(`Numero ${numero} é par!`)
@@ -25,7 +25,7 @@ let adulto = 18;
 let idoso = 60;
 let idadePessoa = 0;
 
-idadePessoa = Number(prompt(`Digite sua idade: `));
+idadePessoa = Number(prompt(`2 Exercicio \nDigite sua idade: `));
 
 if(idadePessoa <= crianca) {
     console.log(`Você tem ${idadePessoa} anos, categoria: criança`);
@@ -39,4 +39,26 @@ if(idadePessoa <= crianca) {
     if (idadePessoa !== NaN) {
    console.log(`Erro: idade inválida`)
 }
+}
+
+/* 3. Implemente um programa que recebe uma nota de 0 a 10 e classifica como
+"Aprovado", "Recuperação", ou "Reprovado" utilizando if-else if. */
+
+let reprovado = 4;
+let recuperacao = 5;
+let aprovado = 10;
+let nota = 0;
+
+nota = Number(prompt(`3 Exercicio \nDigite a nota da prova: `));
+
+if(nota <= reprovado) {
+    console.log(`Você tirou ${nota} --- Reprovado`);
+} else if (nota >= recuperacao && nota <= 6){
+    console.log(`Você tirou ${nota} --- Recuperação`);
+} else if (nota >= 7 && nota <= aprovado){
+    console.log(`Você tirou ${nota} --- Aprovado`);
+} else {
+    if (nota !== NaN) {
+        console.log(`Erro: nota inválida`);
+    }
 }

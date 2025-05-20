@@ -160,3 +160,20 @@ if(quantidadeMacas < 12) {
     valorFinalDesconto = quantidadeMacas * valorDesconto
     console.log(`O valor é: ${valorFinalDesconto.toFixed(2)} e você comprou: ${quantidadeMacas} maças`)
 }
+
+/* 8. Escreva um algoritmo para ler 2 valores (considere que não serão lidos valores iguais)
+e escreve-los em ordem crescente. */
+
+let verificarNumeroUm = 0;
+let verificarNumeroDois = 0;
+
+    verificarNumeroUm = Number(prompt(`Digite o primeiro valor: `));
+    verificarNumeroDois = Number(prompt(`Digite o segundo valor: `));
+
+if (verificarNumeroUm === verificarNumeroDois) {
+  console.log(`Numeros são iguais! Tente novamente.`);
+} else {
+  const menor = Math.min(verificarNumeroUm, verificarNumeroDois);
+  const maior = Math.max(verificarNumeroUm, verificarNumeroDois);
+  console.log(`Numeros: ${menor} - ${maior}`);
+}
